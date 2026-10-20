@@ -10,7 +10,7 @@ module top(
     wire [15:0] BCD;
 
     // Clock divider
-    ClockDiv mod0 (
+    ClockDivider mod0 (
         .clkin(clk),
         .rstn(rstn),
         .clkout1KHz(clk1KHz),
