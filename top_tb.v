@@ -19,12 +19,16 @@ initial begin
     rstn = 0; clk = 0; 
     #20 rstn = 1; //Release reset
 
-    repeat (10) begin //Count up until 10
-        #1342177280; 
+    repeat (100) begin //Count up until 100
+        #2560; 
     end
 
-    #20 rstn = 0; //Test reset
-    #50 
+    #2560 rstn = 0; //Test reset
+    #50 rstn = 1;
+
+    repeat (5) begin //Count 5 more to see reset 
+        #2560; 
+    end 
     $finish; 
 end
 
